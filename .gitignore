@@ -2,3 +2,10 @@
 .DS_Store
 *.log
 .env
+issues*.txt
+build_unique.ps1
+create_*.ps1
+suffix.txt
+body_tmp.txt
+issues_*_unique.txt
+issues_created.log
