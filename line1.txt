@@ -1,0 +1,1 @@
+      <figure class="shot"><img src="assets/screen/search-600w.webp" alt="Search" width="720" height="1560" loading="lazy" decoding="async"><span class="cap"><strong>Search</strong> songs, artists, albums
