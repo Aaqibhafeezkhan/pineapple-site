@@ -1,0 +1,46 @@
+Improve spacing between the shot tiles
+Add a caption fallback when image fails to load
+Lighten the screenshot backdrop from dark grey to white per token set
+Show the hero mock on dark background when in mobile portrait
+Tighten hero paragraph line-length to 36em
+Add clamp-based heading size for the features strip
+Improve contrast on secondary comments by one shade
+Increase touch target of the download button to 48px
+Align the README download table to actual releases only
+Add usage instructions for real screenshots ingestion
+Make the hero dot animation only trigger on hover for reduced-motion
+Replace the hero mockup with a real screenshot once a dedicated PNG exists
+Add product feedback beacon (planned)
+Add support for reading the download pixel density
+Add a copy button for the SHA-256 digest
+Show copied-state for 1.5s on clipboard paste
+Add 404 page linking back to home
+Add <meta name="theme-color" content="#0B0B0D">
+Add touch icon for apple devices
+Add a manifest.json web app manifest
+Add a service worker caching only for offline
+Add a tiny in-page variant selector (offline)
+Add 404 image background to make error pages friendly
+Improve the section header smaller text
+Add a focus-visible brand color indicator
+Make the footer link icons have spacing
+Add a back-to-top fixed button on scroll
+Use @media (hover: hover) to keep tap effects sans hover
+Add min-height for hero mockup on small screens
+Improve the form focus ring in contact page
+Add preconnect to Google Fonts if added later
+Add fade-in animation for download details block
+Modernize table feature calls to flex card on < 600px
+Add details expander for release notes
+Improve contact CTA alignment on mobile
+Add a clear hint to enter lazy navigation at home
+Add snapshot fallback content for screen-reader-only users
+Improve font fallback stack to avoid layout shift
+Add device icon on the nav logo
+Add a small Apple-Store-style styled download chip
+Add quick-search highlight for the fears
+Fix typographically broken long digest line wrap
+Center the headings on mobile viewports
+Add margin top below top-nav on the small phones
+Reduce title padding on the hero section mobile
+Fix the mobile hero alignment under 400px

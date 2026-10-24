@@ -1,0 +1,29 @@
+Improve mobile navigation bar spacing on tablets
+Make sticky nav toggle persist its open state on resize
+Add active-page highlighting to hamburger menu links
+Improve alignment of the logo in the mobile drawer
+Increase mobile CTA button hit target to 48px
+Add a back-to-top button with smooth scroll
+Improve hero eyebrow font family and contrast
+Cap body paragraph width to 70ch on narrow screens
+Enlarge hero heading max size for large desktop displays
+Add clamp-based font sizing for section titles
+Improve secondary caption contrast on dark background
+Replace monotonetext with Inter subset font stack
+Add font-display=swap to the stylesheet
+Add a compact navigation variant for under 480px
+Style the skip-to-main-content link to match accent
+Improve the "Top" anchor target to scroll into view visually
+Make hamburger close when clicking outside the drawer
+Trap focus inside the hamburger when open
+Style focus-visible ring for all interactive cards
+Add aria-contained progress bar on download CTA
+Improve download button states (hover/active)
+Hide the download progress bar when downloads complete
+Make the download CTA auto-expand to full width on mobile
+Add a hover scale effect to the download hero CTA
+Center the hero copy block on small viewports
+Increase hero spacing on mobile from 3rem to 4rem
+Improve the device mock tilt on hover
+Disable device mock animations for reduced-motion users
+Reduce grid gap on mobile to 12px from 1rem

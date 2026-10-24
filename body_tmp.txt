@@ -1,0 +1,9 @@
+Good-first-issue candidate for the Pineapple website (HTML/CSS/JS/UI).
+
+Scope: Expand the active-page highlight to mobile drawer text
+
+Acceptance criteria:
+- Works from 320px to 1440px+ widths
+- Keeps brand tokens (#0B0B0D, #FF8A24) and avoids introducing new arbitrary values
+- Verifiable via python -m http.server 8765 and Lighthouse mobile
+- README.md links back to this issue family
