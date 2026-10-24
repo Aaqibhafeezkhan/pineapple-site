@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark only">
+  <title>Pineapple — Android music, free &amp; open source</title>
+  <meta name="description" content="Pineapple is a native Android music player for YouTube Music. Streams YouTube audio with instant playback, no ads, no premium, no tracking. Free, light, open source.">
+  <meta property="og:title" content="Pineapple">
+  <meta property="og:description" content="Native Android music player. YouTube Music without the premium, without the bloat.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='7' fill='%23FF8A24' stroke='%23140A00' stroke-width='1'/><circle cx='8' cy='8' r='3' fill='%23140A00'/></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <a class="logo" href="index.html"><span class="dot"></span>Pineapple<span>.</span></a>
+      <menu>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://github.com/kiinshuk/pineapple/releases/latest">Get v1.4</a></li>
+      </menu>
+    </nav>
+  </header>
+
+  <a id="main"></a>
+  <main class="hero">
+    <section class="prose">
+      <p class="eyebrow">Android · Native Kotlin · MIT</p>
+      <h1>YouTube music, <span class="acc">without the premium.</span></h1>
+      <p>
+        Pineapple is a lightweight, native Android music player built on YouTube Music.
+        Search, play, save. Instant playback. No ads. No free-software tax.
+        Your library lives on your phone.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary pulse" href="download.html">Download Pineapple-1.4.apk</a>
+        <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple">View source on GitHub</a>
+      </div>
+      <p class="meta">
+        <strong>Android 8.0+</strong> · <strong>2.2 MB</strong> APK ·
+        MIT License · made by one guy
+      </p>
+
+      <div class="hero-list">
+        <div class="hl"><b>Instant playback</b><span>Tap any result and audio starts within seconds — a mix builds in the background.</span></div>
+        <div class="hl"><b>Catalogue built-in</b><span>Artist and album pages with releases, top songs, videos, and related artists.</span></div>
+        <div class="hl"><b>Offline-tolerant</b><span>Cached results stay visible; reconnect banner without a silent fake request.</span></div>
+        <div class="hl"><b>Lock-screen controls</b><span>Notification &amp; lockscreen tray via Media3 — play, pause, skip forward/back.</span></div>
+      </div>
+    </section>
+
+    <section aria-label="App preview" class="device-mock">
+      <div class="device-frame">
+        <div class="device-notch"></div>
+        <div class="device-screen">
+          <div class="fake-art" style="border-radius:10px;font-size:.9rem;flex:1.4;background:linear-gradient(135deg,var(--accent),var(--accent-deep));">
+            <span>Pineapple</span>
+          </div>
+          <div class="meta"><b>Trending now</b><br>Yeshanagula · Dhanush · Veezha Veera</div>
+          <div class="meta"><b>New releases</b><br>Zara Sa · Single  · 2024</div>
+          <div class="meta"><b>Now Playing</b><br>Glory Box — 0:24 / 5:08</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="container">
+    <h2 class="eyebrow" style="margin-top:0;">Screenshots</h2>
+    <div class="shots-grid">
+      <figure class="shot shot-placeholder"><span>Search screen<br>(drop screenshot<br>here)</span><span class="meta">search.png · 1080 × 2340</span></figure>
+      <figure class="shot shot-placeholder"><span>Now Playing<br>(drop screenshot<br>here)</span><span class="meta">now-playing.png · 1080 × 2340</span></figure>
+      <figure class="shot"><div class="fake-art">Dummy</div><span class="meta"><b>Album page</b><br>Portishead  ·  1994   ·  11 songs</span></figure>
+      <figure class="shot"><div class="fake-art" style="background:linear-gradient(135deg,#1b6ca8,#22C1E0);color:#E6F4FF;">Portishead</div><span class="meta"><b>Artist page</b><br>7.77M monthly audience</span></figure>
+      <figure class="shot"><div class="fake-art" style="background:linear-gradient(135deg,#FF5F6D,#FFC371);color:#30180A;">Discovery</div><span class="meta"><b>Discovery</b><br>Trending + new releases + new videos</span></figure>
+      <figure class="shot"><div class="fake-art" style="background:linear-gradient(135deg,#34C77B,#22C1E0);color:#0A1E12;">Library</div><span class="meta"><b>Library</b><br>Liked · recents · search history</span></figure>
+    </div>
+    <p class="minor">Drop real Android screenshots into <code>assets/screen/</code> and update each <code>figure</code>'s markup to <code>&lt;img src="assets/screen/..."&gt;</code>. Each tile is sized for a 1080 × 2340 phone screenshot.</p>
+  </section>
+
+  <section class="container">
+    <h2 class="eyebrow" style="margin-top:2rem;">What it can do</h2>
+    <div class="hero-list">
+      <div class="hl"><b>Browse deeply</b><span>Artist pages (releases, singles, videos, related, bios) and album pages (cover, year, tracks).</span></div>
+      <div class="hl"><b>Instant search</b><span>Songs, artists, albums — debounced, cancel-safe, no network request per keystroke.</span></div>
+      <div class="hl"><b>Reach the player</b><span>Mini-player everywhere; full-player with art, scrubber, queue sheet; notification controls &amp; lockscreen.</span></div>
+      <div class="hl"><b>Forgives bad networks</b><span>Offline states, reconnect banner, cached recents, retry that doesn't silently refetch.</span></div>
+      <div class="hl"><b>Library on-device</b><span>Likes, recents, search history live in the app storage — no signup, no cloud.</span></div>
+      <div class="hl"><b>Token economy</b><span>Zero icon libraries (bundled vectors only). No ads. No telemetry. Android 8.0+.</span></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="visit-cta">
+      <h3>Get it now</h3>
+      <p>Latest release is Pineapple 1.4. Sideload the APK — Android only, no Play Store needed.</p>
+      <div class="actions">
+        <a class="btn-primary" href="download.html">All versions + SHA256</a>
+        <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple/releases/latest">Download 1.4 directly</a>
+      </div>
+      <small>Package: com.torrenttunes.app · MIT licensed · <a href="information.html">Read more</a></small>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Pineapple 2026 · <a href="https://github.com/kiinshuk/pineapple">Source on GitHub</a> ·
+    <a href="https://github.com/kiinshuk/pineapple/issues">Open issues</a> ·
+    <a href="contact.html">Contact</a> ·
+    Built with YouTube's InnerTube · Not affiliated with Google
+  </footer>
+</body>
+</html>

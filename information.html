@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Information — Pineapple</title>
+  <meta name="description" content="What Pineapple is, how it works, and what it can do. Native Android music player for YouTube Music, MIT licensed.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <a class="logo" href="index.html"><span class="dot"></span>Pineapple<span>.</span></a>
+      <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="information.html" aria-current="page">Information</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://github.com/kiinshuk/pineapple/releases/latest">Get v1.4</a></li>
+      </menu>
+    </nav>
+  </header>
+
+  <main class="container" id="main">
+    <h1 class="eyebrow" style="font-size:1.75rem;letter-spacing:0;margin:0 0 .5rem;">Pineapple</h1>
+    <p style="font-size:1.05rem; color:var(--muted); max-width:760px;">A native Android music player built for YouTube Music — light, fast, no account, no ads, no premium. Streams YouTube's own audio via the InnerTube API and keeps your catalogue and playback entirely on-device.</p>
+
+    <section class="hero-list" style="margin-top:1rem">
+      <div class="hl"><b>Package</b><span><code>com.torrenttunes.app</code></span></div>
+      <div class="hl"><b>License</b><span>MIT</span></div>
+      <div class="hl"><b>Android</b><span>8.0+ · API 26 → current</span></div>
+      <div class="hl"><b>Language</b><span>Kotlin + Jetpack Compose</span></div>
+      <div class="hl"><b>Dependencies</b><span>Zero new ones — no icon libraries, no heavy framework weight.</span></div>
+      <div class="hl"><b>Source</b><span>github.com/kiinshuk/pineapple</span></div>
+    </section>
+
+    <div class="prose">
+      <h2>1. How it's built</h2>
+      <p>Pineapple sits on a small, deliberately conservative stack so it runs well on the cheapest hardware:</p>
+      <ul>
+        <li><strong>Compose + Material 3</strong> dark-first theme with <code>PineBackground #0B0B0D</code> / <code>PineAccent #FF8A24</code>.</li>
+        <li><strong>Media3 / ExoPlayer</strong> for streaming audio, gapless transitions, audio focus and "audio becoming noisy" awareness.</li>
+        <li><strong>Hilt</strong> for the small amount of dependency injection we actually need.</li>
+        <li><strong>InnerTube client</strong> (<code>InnerTube.kt</code>) — hand-rolled, speaks the private YouTube Music endpoints with the same client (WEB_REMIX 67, VISIONOS for playback) the official apps use.</li>
+      </ul>
+
+      <h2>2. What it can retrieve from the InnerTube client</h2>
+      <ul>
+        <li><strong>Search</strong>: songs (official music only — <code>OFFICIAL_MUSIC_TYPES</code> whitelist), artists, albums, related artists. Debounced, cancel-safe — no request per keystroke.</li>
+        <li><strong>Discovery</strong>: trending rail, new releases, new music videos (sourced from <code>FEmusic_explore</code>).</li>
+        <li><strong>Artist pages</strong>: immersive header (name, audience count, banner), Top songs, release carousels (Albums, Singles & EPs, Videos, Live performances), related artists, and a biography.</li>
+        <li><strong>Album pages</strong>: square cover art, artist + year, kind / song count / duration, ordered track list.</li>
+        <li><strong>Playback</strong>: stream resolution, related-track continuation for an auto-building mix, artwork URL.</li>
+        <li><strong>Related tracks</strong> continuation to traverse search results into a listening session.</li>
+      </ul>
+
+      <h2>3. Playback &amp; slow networks</h2>
+      <ul>
+        <li>Streaming handled by ExoPlayer directly from the HTTPS stream URL — no memory download whole track.</li>
+        <li>Connection &amp; read timeouts, bounded retry with exponential backoff, cancellation of stale requests.</li>
+        <li>Request dedup; limited concurrency; cached catalogue metadata (Room-independent; local storage via the existing library layer).</li>
+        <li>Crashes and permanent transport failures are surfaced clearly as "Could not play this track" plus recoverable retry.</li>
+        <li>Cancellation-safety / rethrowing <code>CancellationException</code> in every MainViewModel catch block (no false "StandaloneCoroutine was cancelled" banners).</li>
+        <li>Distinct <strong>offline</strong> and <strong>reconnect</strong> states on Search/Discovery (a reconnect shows cached results without silent refetch).</li>
+        <li>Android media sessions for lock-screen and Bluetooth + notification (Android 12/13+; permission prompt as required).</li>
+      </ul>
+
+      <h2>4. Visual &amp; interaction design rules</h2>
+      <ul>
+        <li><strong>Dark-first</strong>, warm accent — big, expressive album artwork.</li>
+        <li>Custom seek bar (7 dp, rounded caps, scaled thumb), poster-derived/brand-aligned palette, no poster-bleed background.</li>
+        <li>Coil image pipeline with memory+disk cache and crossfade placeholders.</li>
+        <li>Stable list keys and efficient lazy rendering; no main thread work for network/DB/image.</li>
+        <li>Empty / loading / error states never mass-replace; skeletons and inline banners.</li>
+        <li>Touch targets 48 dp (a11y); semantic labels on controls.</li>
+        <li>Offline behaviour gracefully hides unavailable sections (never fake entries).</li>
+      </ul>
+
+      <h2>5. What it isn't</h2>
+      <ul>
+        <li><strong>Not on Google Play.</strong> Sideload-only. Uses InnerTube like NewPipe — can't be published under Google's Terms. See README legal.</li>
+        <li><strong>Not a Spotify clone</strong> — visual identity is original (pineapple-orange record-store aesthetic).</li>
+        <li><strong>No account, no sign-in required.</strong> Favourites and recents are local; no cloud sync.</li>
+        <li><strong>No ads and no telemetry.</strong> No third-party audience networks; crash logging is local only.</li>
+      </ul>
+
+      <h2>6. Contributing &amp; ecosystem</h2>
+      <ul>
+        <li><a href="https://github.com/kiinshuk/pineapple/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> rules: no new dependencies; icons via bundled vector drawables only; tests on a real device via <code>dev.ps1</code>.</li>
+        <li>Verified-claims discipline: bugs/UX decisions are filed against device evidence; four reported issues closed with proof.</li>
+        <li>Good-issue backlog: numbers 12–111 (99 of them), matching the bug/UX backlog.</li>
+        <li><a href="https://github.com/kiinshuk/pineapple/issues">Issues are the welcome queue.</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/kiinshuk/pineapple">Source on GitHub</a> ·
+    <a href="information.html">Information</a> ·
+    <a href="download.html">Download</a> ·
+    <a href="contact.html">Contact</a> ·
+    Licensed MIT · Not affiliated with Google · Powered by InnerTube
+  </footer>
+</body>
+</html>

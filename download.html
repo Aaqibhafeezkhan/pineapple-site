@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark only">
+  <title>Download Pineapple — all releases</title>
+  <meta name="description" content="Download every official Pineapple APK release, from v1.0 (3655230) to v1.4. Android only, native Kotlin.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <a class="logo" href="index.html"><span class="dot"></span>Pineapple<span>.</span></a>
+      <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="download.html" aria-current="page">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="https://github.com/kiinshuk/pineapple/releases/latest">Latest on GH</a></li>
+      </menu>
+    </nav>
+  </header>
+
+  <main class="container" id="main">
+    <header class="section">
+      <h1 style="font-size:2.3rem;letter-spacing:-.03em;margin:0 0 .4rem;">Download Pineapple</h1>
+      <p style="color:var(--muted);max-width:620px;margin:0;">Sideload the latest APK — no Play Store needed. Pineapple is Android-only, native Kotlin. Development happens in public; every release is signed and published with its SHA-256.</p>
+    </header>
+
+    <section class="visit-cta" aria-labelledby="latest">
+      <p class="badge">Latest · v1.4</p>
+      <h3 id="latest">Pineapple 1.4 — Catalogue edition</h3>
+      <p>Full artist &amp; album catalogue (releases, singles, videos, related artists, bios), 7 dp rounded seek bar, Coil artwork pipeline, the notification/lockscreen controls actually activate, Discovery carousels (New releases · New music videos). 40 unit tests green.</p>
+      <div class="actions">
+        <a class="btn-primary pulse" href="https://github.com/kiinshuk/pineapple/releases/download/v1.4/Pineapple-1.4.apk">Download v1.4 (2.2 MB)</a>
+        <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple/releases/tag/v1.4">Release notes v1.4</a>
+      </div>
+      <small>SHA256: <code>6a953b53c8b31de09e846434a4e6612f791872649cb88acc4f420e954f4b4143</code> · minSdk 26 · targetSdk 35 · 24 Oct 2026</small>
+    </section>
+
+    <h2 class="section" style="margin-top:2.2rem;">All versions</h2>
+    <p class="lede">Each row is the signed release asset. Choose the tag to read the full release notes; the APK filename is <code>Pineapple-x.y.apk</code>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th class="sh">Version</th>
+          <th>Tag</th>
+          <th>Status</th>
+          <th>Released</th>
+          <th class="sh">Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1.4</strong></td>
+          <td><code>v1.4</code></td>
+          <td><span class="tag latest">Latest</span></td>
+          <td>24 Oct 2026 · 2.20 MB</td>
+          <td><a class="trlink" href="https://github.com/kiinshuk/pineapple/releases/download/v1.4/Pineapple-1.4.apk">APK</a> · <a href="https://github.com/kiinshuk/pineapple/releases/tag/v1.4">notes</a></td>
+        </tr>
+        <tr>
+          <td><strong>1.3</strong></td>
+          <td><code>v1.3</code></td>
+          <td><span class="tag">Stable</span></td>
+          <td>24 Oct 2026 · 2.19 MB</td>
+          <td><a class="trlink" href="https://github.com/kiinshuk/pineapple/releases/download/v1.3/Pineapple-1.3.apk">APK</a> · <a href="https://github.com/kiinshuk/pineapple/releases/tag/v1.3">notes</a></td>
+        </tr>
+        <tr>
+          <td><strong>1.2</strong></td>
+          <td><code>v1.2</code></td>
+          <td><span class="tag">Stable</span></td>
+          <td>21 Oct 2026 · 2.08 MB</td>
+          <td><a href="https://github.com/kiinshuk/pineapple/releases/tag/v1.2" class="trlink">Release page</a></td>
+        </tr>
+        <tr>
+          <td><strong>1.0</strong></td>
+          <td><code>v1.0</code></td>
+          <td><span class="tag">Stable</span></td>
+          <td>21 Oct 2026</td>
+          <td><a href="https://github.com/kiinshuk/pineapple/releases/tag/v1.0" class="trlink">Release page</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="section">
+      <h2>How to install the APK</h2>
+      <div class="prose">
+        <ol>
+          <li>Download the APK from this page (or your phone directly).</li>
+          <li>You'll see <em>Install blocked</em> — tap <strong>Settings</strong> on that dialog, then enable <strong>Install unknown apps</strong> for the browser/Files app you used.</li>
+          <li>Confirm the install; open Pineapple from the launcher.</li>
+        </ol>
+        <p class="minor">Android 8.0 (API 26) or newer. Uninstall a previous Pineapple first if upgrading across build signatures (only from <code>pm install</code> dev builds — release signed builds upgrade in place).</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Source &amp; verification</h2>
+      <div class="prose">
+        <p>Every tagged release is built from source and linked here. Source lives in the <a href="https://github.com/kiinshuk/pineapple">main GitHub repository</a>; all development happens through opening PRs against <code>main</code>. The latest tip of <code>main</code> builds with <code>assembleDebug</code> / <code>testDebugUnitTest</code> (currently 40 unit tests passing). The release tag points to the exact commit of the published APK (tree tested via the <code>dev.ps1</code> script).</p>
+        <ul>
+          <li><a href="https://github.com/kiinshuk/pineapple/commits/main">Commit history</a></li>
+          <li><a href="https://github.com/kiinshuk/pineapple/issues">Issue tracker</a> (file bugs / requests)</li>
+          <li><a href="https://github.com/kiinshuk/pineapple/blob/main/CONTRIBUTING.md">Contributing guidelines</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      &copy; Pineapple 2026 · <a href="https://github.com/kiinshuk/pineapple">Source on GitHub</a> ·
+      <a href="information.html">Information</a> ·
+      <a href="download.html">Download</a> ·
+      <a href="contact.html">Contact</a>
+    </footer>
+  </main>
+</body>
+</html>

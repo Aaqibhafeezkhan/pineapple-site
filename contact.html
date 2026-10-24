@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark only">
+  <title>Contact — Pineapple</title>
+  <meta name="description" content="Contact Pineapple owners: report bugs, request features, or contribute.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <a class="logo" href="index.html"><span class="dot"></span>Pineapple<span>.</span></a>
+      <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="nav-cta" href="https://github.com/kiinshuk/pineapple/releases/latest">Get v1.4</a></li>
+      </menu>
+    </nav>
+  </header>
+
+  <main class="container" id="main">
+    <h1 class="eyebrow" style="font-size:1.75rem;margin-bottom:.4rem;">Contact Pineapple</h1>
+    <p style="color:var(--muted);max-width:620px;margin:0 0 1.5rem;">Got a bug, a feature idea, or want to contribute? Here are the fastest ways to reach us. Replies go to the maintainers via GitHub — there's no official mailbox, but a project email forward is being set up.</p>
+
+    <div class="contact-grid">
+      <section class="card">
+        <h3>🐛 Report a bug</h3>
+        <p>Best path: open a GitHub issue with device, severity, and reproduction. Filing with details gets traction fastest.</p>
+        <div class="visit-cta actions" style="margin-top:.5rem;padding:0;background:none;border:none">
+          <a class="btn-primary" href="https://github.com/kiinshuk/pineapple/issues/new?template=bug_report.md" target="_blank" rel="noopener">Open a bug report</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>✨ Request / suggest a feature</h3>
+        <p>UX redesigns, artist features, catalogue requests: the issue backlog already holds 99 starter tickets (#12–#111).</p>
+        <div class="actions" style="margin-top:.75rem">
+          <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple/issues/new?template=feature_request.md" target="_blank" rel="noopener">Suggest a feature</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>💬 Community &amp; discussion</h3>
+        <p>For design questions, use case story or how-to, join GitHub Discussions — keeps answers searchable forever.</p>
+        <div class="actions" style="margin-top:.75rem">
+          <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple/discussions" target="_blank" rel="noopener">Start a discussion</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>🔧 Contribute PRs</h3>
+        <p>Read <a href="CONTRIBUTING.md" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">CONTRIBUTING.md</a> first (no new deps · bundled vectors only). Tag your PR; we run <code>assembleDebug testDebugUnitTest</code> locally before merge.</p>
+        <div class="actions" style="margin-top:.75rem">
+          <a class="btn-secondary" href="https://github.com/kiinshuk/pineapple/pulls" target="_blank" rel="noopener">Pull requests</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>📧 Direct reach</h3>
+        <p>Email alias being finalised. For now, ping <a href="mailto:kiinshuk@users.noreply.github.com" style="color:var(--accent);text-decoration:underline;">kiinshuk@users.noreply.github.com</a> with <code>[Pineapple]</code> in the subject — or open an <a href="https://github.com/kiinshuk/pineapple/issues/new" style="color:var(--accent);text-decoration:underline;">issue</a>. Spam to that address is reported.</p>
+        <small>For sensitive issues (security), use GitHub's <a href="https://github.com/kiinshuk/pineapple/security/advisories/new" style="color:var(--accent);text-decoration:underline;">private advisory flow</a>.</small>
+      </section>
+
+      <section class="card" style="background:linear-gradient(180deg, rgba(255,138,36,.08), rgba(0,0,0,0))">
+        <h3>💖 Sponsor the maintainer</h3>
+        <p>Pineapple is free &amp; MIT. If it's useful to you, star the repo and consider sponsoring the maintainer.</p>
+        <div class="actions" style="margin-top:.75rem">
+          <a class="btn-secondary" href="https://github.com/sponsors/kiinshuk" target="_blank" rel="noopener">Sponsor</a>
+          <a class="btn-secondary" href="https://github.com/star/history?repos=kiinshuk/pineapple&type=Date" target="_blank" rel="noopener">Star history</a>
+        </div>
+      </section>
+    </div>
+
+    <section class="section">
+      <h2>Direct reach for a bug</h2>
+      <div class="prose">
+        <p>For speed, include in your issue or email:</p>
+        <ul>
+          <li>Device model + Android version (API level if known).</li>
+          <li>Steps to reproduce + tap-by-tap names.</li>
+          <li>Whether you're on Wi-Fi / cell / airplane mode.</li>
+          <li>Logcat snippet (Settings → Developer options → Take bug report) if the app crashes.</li>
+          <li>Screenshot (Settings > Account's screenshot) when UI issue.</li>
+        </ul>
+        <p>If requesting a device test, we bill at zero — but we do ask for the device-access itself, or at least synthetic offline/low-latency tests.</p>
+      </div>
+    </section>
+
+    <footer>
+      Maintainer responds best via <a href="https://github.com/kiinshuk/pineapple/issues">open issues</a>. ·
+      <a href="https://github.com/kiinshuk/pineapple">Source</a> ·
+      <a href="download.html">Download</a> ·
+      <a href="information.html">Information</a>
+    </footer>
+  </main>
+</body>
+</html>
