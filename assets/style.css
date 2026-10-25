@@ -1,27 +1,26 @@
 :root {
-  --bg: #7a8aba;          /* canvas periwinkle */
-  --bg-2: #9fbee7;        /* pale sky */
-  --surface: #dedede;      /* platinum */
-  --surface-high: #ffffff; /* white cards */
-  --accent: #f68d1f;       /* signal orange */
-  --accent-deep: #e48600;
-  --text: #21242e;         /* carbon */
-  --muted: #3d4f97;        /* chrome indigo */
-  --muted-2: #60619c;
-  --border: #5a5f8c;
-  --red: #e60012;          /* Nintendo red */
-  --gerbil: #ecab37;       /* amber */
-  --radius-none: 0px;
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 10px;
+  --bg: #090909;
+  --bg-2: #141414;
+  --surface: #141414;
+  --surface-high: #1c1c1c;
+  --accent: #0099ff;
+  --accent-d: #007acc;
+  --text: #ffffff;
+  --muted: #999999;
+  --muted-2: #7c7c7c;
+  --border: #262626;
+  --ok: #22c55e;
+  --err: #f3727f;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
   --gutter: 1.25rem;
-  --font: 'Arial', 'Helvetica Neue', 'Helvetica', system-ui, sans-serif;
-  --font-display: 'Arial Black', 'Arial', system-ui, sans-serif;
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", "Mona Sans", "Geist", system-ui, sans-serif;
   scroll-behavior: smooth;
-  color-scheme: light dark;
+  color-scheme: dark only;
 }
 * { box-sizing:border-box; margin:0; padding:0; }
 html { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.4; -webkit-font-smoothing: none; }
