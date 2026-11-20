@@ -49,6 +49,9 @@ nav menu a:hover, nav menu a[aria-current="page"] { background:var(--canvas, #7a
   .hb { display:inline-block; }
   nav menu { position:absolute; top:100%; left:0; right:0; background:#21242e; flex-direction:column; padding:var(--gutter); gap: 2px; display:none; }
   nav menu.open { display:flex; }
+  nav menu li { width:100%; }
+  nav menu li a { display:block; width:100%; }
+  nav menu a[aria-current="page"] { background:var(--accent); color:var(--bg); border-color:var(--accent); }
   .nav-inner { position:relative; }
 }
 
